@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Container principal do cabeçalho */
+body, nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem; /* Adiciona espaçamento interno */
+    background-color: #1a1a1a; /* Cor de fundo escura */
+    color: #ffffff;
+}
+
+nav ul { 
+    display: flex;
+    list-style: none; /* Remove os marcadores da lista */
+    padding: 0px;
+    margin: 0px;
+}
+
+nav ul a {
+    padding: 0 1rem;
+    color: #ffffff;
+    text-decoration: none; /* Remove o sublinhado */
+
+        
+}
+

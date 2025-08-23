@@ -1,113 +1,86 @@
-@charset "UTF-8";
-
-* {
-    margin: 0px;
-    padding: 0px;
+body {
     font-family: "Poppins", sans-serif;
+    background-color: #1a1a1a;
+    overflow-x: hidden; /* tira a rolagem horizontal */
 }
 
-/* Container principal do cabeçalho */
-body nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 2rem; /* Adiciona espaçamento interno */
-    background-color: #1a1a1a; /* Cor de fundo escura */
-    color: #ffffff;
+header {
+    background-color: #1a1a1a;
+    border-bottom: 1px solid gray;
 }
 
-nav ul { 
-    display: flex;
-    list-style: none; /* Remove os marcadores da lista */
-    padding: 0px;
-    margin: 0px;
+header .nav-link {
+    color: rgb(151, 150, 150);
+    transition: 0.3s;
 }
 
-nav ul a {
-    padding: 0 1rem;
-    color: #ffffff;
-    text-decoration: none; /* Remove o sublinhado */
-}
-
-.logo {
-   height: 50px;
-   width: auto; 
-}
-
-body section{
-    background-image: linear-gradient(135deg, #1e393f 0%, #0c1a1e 100%);
-    height: 100vh;
-    width: 100vw;
-}
-
-section div.nav {
-    padding-top: 100px;
-    padding-left: 60px;
+header .nav-link:hover {
     color: white;
 }
 
-section div.nav h1.vrd {
-    color: #047e69;
+section.primeiro {
+    color: gray;
+    padding: 100px 15px;
 }
 
-section div.nav h1 {
-    font-size: 3.7em;
-}
-
-section div.nav p {
-    padding-top: 10px;
+section h1#p1 {
+    font-size: 2.5rem;
     color: white;
-    font-size: 1.2em;
+    font-weight: 700;
 }
 
-.imagem {
-    width: 40%;
-    position: relative;
-    padding-left: 70%;
-    top: -35%;
+section h2#p2 {
+    font-size: 2rem;
+    color: rgb(97, 226, 97);
+    margin-bottom: 20px;
 }
 
-.imagem img{
-    height: auto;
-    width: 40%;
-    display: block;
-}
-
-section div.botoes-container {
-    display: flex;
-    gap: 15px;
-}
-
-.btn {
-  text-decoration: none;
-  padding: 12px 24px;
-  border-radius: 8px;
-  color: white;
-  text-align: center;
-  font-family: sans-serif; 
-  font-weight: 500;
-  white-space: nowrap; 
-  display: inline-block; 
-  border: none; 
-}
-
-.btn-principal {
-    font-family: "Poppins", sans-serif;
-    margin-left: 60px;
-    margin-top: 40px;
-  background-color: #00875a; 
-}
-
-.btn-secundario {
-    font-family: "Poppins", sans-serif;
-    margin-left: 5px;
-    margin-top: 40px;
-  background-color: #2c2f33; 
-}
-
-section div.rod {
-    text-align: center;
+section p#m1 {
+    font-size: 1rem;
     color: white;
-    font-size: 1.2em;
+    margin-bottom: 20px;
 }
 
+.botoes button {
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(97, 226, 97);
+    border: none;
+    padding: 10px 20px;
+    transition: 0.3s;
+}
+
+.botoes button:hover {
+    opacity: 0.8;
+}
+
+section h1#p3 {
+    font-size: 2rem;
+    color: gray;
+    margin-bottom: 10px;
+}
+
+section p#m2, section p#m3 {
+    font-size: 1rem;
+    color: white;
+    margin: 0;
+}
+
+section.segundo {
+    margin-top: 50px;
+}
+
+.card {
+    background-color: #2a2a2a;
+    border: none;
+    color: white;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+section.terceiro {
+    background-color: rgb(67, 153, 67);
+}

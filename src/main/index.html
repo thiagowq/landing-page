@@ -1,53 +1,150 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos/style.css">
+    <title>Landing-Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu" />
-    <title> Landing Page </title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/style.css">
 </head>
 <body>
-    <nav>
-        <div class="logo">
-            <img src="../imagens/logos/Palmeiras_logo.svg.png" alt="logo" class="logo">
-        </div>
-        <ul>
-            <li><a href="#">Recursos</a></li>
-            <li><a href="#">Depoimentos</a></li>
-            <li><a href="#">Preços</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Contato</a></li>
-        </ul>
-
-        <span class="material-symbols-outlined">menu</span>
-        
-    </nav>
-
-    <section class="hero-section">
-        <div class="nav">
-            <h1>Gestão e controle</h1>
-            <h1 class="vrd">Simplificados</h1>
-            <p>A Cash Flow ajuda Empreendedores a gerenciar <br> seus negócios, controle e fluxo de caixa automatizado, <br> economizando tempo e melhorando o controle dos gastos e recursos.</p>
-        </div>
-
-        <div class="botoes-container">
-            <a href="esqueci.html" class="btn btn-principal">Começar Agora →</a>
-            <a href="esqueci.html" class="btn btn-secundario">Saiba Mais</a>
-        </div>
-
-        <div class="imagem">
-            <img src="../imagens/logos/Palmeiras_logo.svg.png" alt="palmeiras">
-        </div>
-
-        <div class="rod">
-            <h2>O que entregamos?</h2>
-            <p>Nossa plataforma foi projetada para tornar a gestão da sua empresa <br> mais simples e eficientes.</p>
+    
+    <header> 
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="../imagens/logos/98qqfafufhcmup6exeazk-e1671234096522.png" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link" aria-current="page" href="#">Recursos</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#">Depoimentos</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#">Preços</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#">FAQ</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contato</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ">
+                        <li class="nav-item dropdown end-100 me-5">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img id="imagem" src="../imagens/logos/sol.svg" alt="" >
+                            </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Modo Escuro</a></li>
+                            <li><a class="dropdown-item" href ="#">Modo Claro</a></li>
+                            <li><a class="dropdown-item" href="#">Sistema</a></li>
+                        </ul>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </nav>
+    </header>  
+    
+    <section class="primeiro container text-center text-md-start">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h1 id="p1">Fluxo de Caixa e Controle</h1>
+                <h2 id="p2">automatizados</h2>
+                <p id="m1">
+                    Cash Flow ajuda profissionais Empreendedores a gerenciar <br>
+                    seus negócios, com facilidade, economizando tempo <br>
+                    e melhorando o atendimento ao cliente.
+                </p>
+                <div class="botoes d-flex gap-3 flex-wrap">
+                    <button>Começar Agora</button>
+                    <button>Saiba Mais</button>
+                </div>
+            </div>
+            <div class="col-md-6 text-center mt-5 mt-md-0">
+                <h1 id="p3">O que entregamos?</h1>
+                <p id="m2">Nossa plataforma foi projetada para tornar a gestão do seu negócio simples</p>
+                <p id="m3">segura e eficiente</p>
+            </div>
         </div>
     </section>
 
+    <section class="segundo container my-5">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Gestão do Negócio</h5>
+                            <p class="card-text">Gerencie facilmente informações de clientes, compras e histórico em um único local centralizado.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Seguro & Conforme</h5>
+                            <p class="card-text">Seus dados são protegidos com segurança de nível empresarial e padrões de conformidade.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Economia de Tempo</h5>
+                            <p class="card-text">Reduza o trabalho administrativo e concentre-se mais no atendimento ao paciente com nossos fluxos de trabalho otimizados.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Relatórios Digitais</h5>
+                            <p class="card-text">Acompanhe os relatórios mensais e analise como pode melhorar o seu negócio.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Visão Completa</h5>
+                            <p class="card-text">Obtenha uma visão completa das informações do cliente durante a venda para investimentos mais precisos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Escalabilidade</h5>
+                            <p class="card-text">Nossa plataforma cresce junto com o seu negócio, sem complicações.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <main>
+        <section class="terceiro container text-center text-md-start">
+            <div>
+                <h1>Controle Total dos seus Gastos!</h1>
+                <p>Gerencie seus gastos de acordo com o que você vende <br> e mantenha-se de cabeça fria.</p>
+                <div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">
+
+    </script>
 </body>
 </html>

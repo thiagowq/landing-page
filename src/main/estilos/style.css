@@ -50,6 +50,15 @@ section p#m1 {
     transition: 0.3s;
 }
 
+.botoes button#pri {
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(82, 82, 82);
+    border: none;
+    padding: 10px 20px;
+    transition: 0.3s;
+}
+
 .botoes button:hover {
     opacity: 0.8;
 }
@@ -82,5 +91,25 @@ section.segundo {
 }
 
 section.terceiro {
-    background-color: rgb(67, 153, 67);
+    height: auto;
+    width: 100%;
+    background-color: rgb(63, 146, 63);
+    padding: 40px 20px;
+    color: #fff;
+}
+
+.bloco1, h1{
+    font-size: 40px;
+    color: white;
+}
+
+.bloco1, p{
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+section.terceiro div:nth-of-type(2) h1 {
+    padding-top: 50px;
+    font-size: 28px;
 }

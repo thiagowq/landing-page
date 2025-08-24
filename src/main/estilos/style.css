@@ -113,3 +113,85 @@ section.terceiro div:nth-of-type(2) h1 {
     padding-top: 50px;
     font-size: 28px;
 }
+
+section.quarto{
+    background-color: #1a1a1a;
+}
+
+.divis1{
+    flex: 1;
+    margin: 0 10px;
+    min-height: 400px;
+    padding: 20px;
+    border: 1px solid rgb(162, 228, 204);
+    border-radius: 10px;
+}
+
+.divis1, h3{
+    color: white;
+}
+
+.botoes1 button {
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(97, 226, 97);
+    border: none;
+    padding: 8px 16px;
+    transition: 0.3s;
+}
+
+.botoes1 button:hover {
+    opacity: 0.8;
+}
+
+section.quarto{
+    padding-top: 5%;
+}
+
+section.quinto{
+    padding-top: 10%;
+}
+
+.accordion {
+    --bs-accordion-border-width: 0 !important;
+    --bs-accordion-border-radius: 0 !important;
+    --bs-accordion-inner-border-radius: 0 !important;
+    max-width: 900px;
+    width: 100%;
+}
+
+.accordion-button {
+  background-color: #1e1e1e; /* fundo do botão */
+  color: #fff; /* texto branco */
+  font-size: 18px; /* aumenta o tamanho da fonte */
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #1a1a1a; /* fundo quando está aberto */
+  color:white;
+}
+
+.accordion-body {
+  background-color: #1a1a1a; /* fundo do corpo */
+  color: white; /* cor do texto */
+  font-size: 16px; /* aumenta fonte do conteúdo */
+}
+
+.accordion-item{
+    border: none !important;
+    border-radius: 0 !important;
+}
+
+.accordion-button:focus {
+  box-shadow: none !important;
+  outline: 0 !important;
+}
+
+.accordion-item:last-of-type {
+  border-bottom-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+section.sexto{
+    padding-top: 10%;
+}

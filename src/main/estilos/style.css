@@ -115,20 +115,34 @@ section.terceiro div:nth-of-type(2) h1 {
 }
 
 section.quarto{
+    padding-top: 5%;
     background-color: #1a1a1a;
 }
 
 .divis1{
-    flex: 1;
-    margin: 0 10px;
-    min-height: 400px;
+    margin: 0;
+    min-height: 350px;
     padding: 20px;
     border: 1px solid rgb(162, 228, 204);
     border-radius: 10px;
+    background-color: #2a2a2a;
+    transition: transform 0.2s ease-in-out;
+}
+
+.divis1:hover {
+    transform: translateY(-5px);
 }
 
 .divis1, h3{
     color: white;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.divis1 p {
+    color: #ccc;
+    font-size: 1rem;
+    margin-bottom: 15px;
 }
 
 .botoes1 button {
@@ -142,10 +156,6 @@ section.quarto{
 
 .botoes1 button:hover {
     opacity: 0.8;
-}
-
-section.quarto{
-    padding-top: 5%;
 }
 
 section.quinto{
@@ -194,4 +204,56 @@ section.quinto{
 
 section.sexto{
     padding-top: 10%;
+}
+
+/* ------------------- RESPONSIVIDADE ------------------- */
+@media (max-width: 768px) {
+    section.primeiro {
+        text-align: center;
+        padding: 50px 15px;
+    }
+
+    section h1#p1 {
+        font-size: 1.8rem;
+    }
+
+    section h2#p2 {
+        font-size: 1.5rem;
+    }
+
+    .botoes {
+        justify-content: center;
+    }
+
+    .botoes button {
+        min-width: 120px;
+        padding: 8px 14px;
+    }
+
+    section.terceiro h1 {
+        font-size: 1.6rem;
+    }
+
+    .divis1 {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    section h1#p1 {
+        font-size: 1.5rem;
+    }
+
+    section h2#p2 {
+        font-size: 1.2rem;
+    }
+
+    .botoes button {
+        width: 100%;
+    }
+
+    section.terceiro h1 {
+        font-size: 1.4rem;
+    }
 }

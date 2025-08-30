@@ -206,6 +206,119 @@ section.sexto{
     padding-top: 10%;
 }
 
+.contato-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    padding-top: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px; /* espaço entre as colunas */
+}
+
+.contato{
+    padding-top: 20px;
+    text-align: left;
+}
+
+/* lado esquerdo */
+.contato-info {
+    flex: 1;
+    padding-top: 20px;
+    text-align: left;
+}
+
+.form{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+/* lado direito (formulário) */
+.contato-form {
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.form h4{
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.form-horizontal{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-group{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    background: #222;
+    border: 1px solid #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.form-control::placeholder {
+    color: #aaa;
+}
+
+.btn-enviar {
+    background: rgb(97, 226, 97);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* itens (ícone + texto) */
+.contato-item {
+    display: flex;
+    align-items: flex-start;
+    margin: 20px 0;
+}
+
+.contato-item img {
+    width: 25px;
+    margin-right: 10px;
+}
+
+.contato-item h6 {
+    margin: 0;
+    color: #fff;
+}
+
+.contato-item p {
+  margin: 3px 0;
+  color: #aaa;
+}
+
+
+
+
 /* ------------------- RESPONSIVIDADE ------------------- */
 @media (max-width: 768px) {
     section.primeiro {
@@ -237,6 +350,20 @@ section.sexto{
     .divis1 {
         width: 100%;
         margin: 10px 0;
+    }
+
+    .contato-container {
+        flex-direction: column; /* Altera a direção dos itens para coluna */
+    }
+
+    .contato-info,
+    .contato-form {
+        flex: auto; /* Remove a flexibilidade para que ocupem 100% da largura */
+        width: 100%;
+    }
+
+    .contato-form {
+        margin-top: 20px; /* Adiciona um espaço entre o bloco de contato e o formulário */
     }
 }
 

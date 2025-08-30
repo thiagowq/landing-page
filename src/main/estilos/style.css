@@ -304,6 +304,7 @@ section.sexto{
 .contato-item img {
     width: 25px;
     margin-right: 10px;
+    filter: invert(47%) sepia(21%) saturate(2102%) hue-rotate(104deg) brightness(97%) contrast(89%);
 }
 
 .contato-item h6 {

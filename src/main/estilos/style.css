@@ -317,8 +317,26 @@ section.sexto{
   color: #aaa;
 }
 
+.informacao{
+    background-color: rgb(72, 192, 72);
+    text-align: center;
+    padding-top: 50px;
+    height: 250px;
+    left: 100vh;
+}
 
+footer a.text-white {
+    /* Define uma cor inicial para os links, com um pouco de transparência para ficar mais suave */
+    color: rgba(255, 255, 255, 0.7) !important; 
+    /* Adiciona a transição na propriedade 'color' para que a mudança seja suave */
+    transition: color 0.3s ease-in-out;
+}
 
+/* Estilo para quando o mouse passar por cima do link */
+footer a.text-white:hover {
+    /* Altera a cor para branco puro */
+    color: #fff !important; 
+}
 
 /* ------------------- RESPONSIVIDADE ------------------- */
 @media (max-width: 768px) {

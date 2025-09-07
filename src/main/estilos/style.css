@@ -404,7 +404,7 @@ footer a.text-white:hover {
     }
 
     .botoes .btn {
-    width: 40%; /* Faz o botão ocupar 100% da largura do contêiner */
+    width: 100%; /* Faz o botão ocupar 100% da largura do contêiner */
     padding: 0.75rem 1.5rem; /* Diminui o padding para um botão menor */
     font-size: 1rem; /* Diminui o tamanho da fonte */
     }

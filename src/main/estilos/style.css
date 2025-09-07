@@ -348,6 +348,23 @@ footer a.text-white:hover {
     margin: 0 auto; /* Centraliza o parágrafo */
 }
 
+.botoes .btn-primary { /* Usando .btn-primary para ter certeza que é o botão certo */
+    background-color: #419641; /* Cor de fundo verde que parece com a imagem */
+    border-color: #419641; /* Cor da borda igual à do fundo */
+    color: white; /* Cor do texto do botão */
+    border-radius: 0.5rem; /* Borda arredondada */
+    text-align: center; /* Garante que o texto esteja centralizado */
+    display: inline-block; /* Ou block, dependendo do comportamento desejado */
+    padding: 1rem 2rem; /* Padding base para o botão */
+    font-size: 1.25rem; /* Tamanho da fonte base */
+    transition: all 0.3s ease-in-out; /* Transição para hover */
+}
+
+.botoes .btn-primary:hover {
+    background-color: #237723; /* Uma cor um pouco mais escura no hover */
+    border-color: #237723;
+}
+
 /* ------------------- RESPONSIVIDADE ------------------- */
 @media (max-width: 768px) {
     section.primeiro {
@@ -403,10 +420,14 @@ footer a.text-white:hover {
         font-size: 1rem;
     }
 
-    .botoes .btn {
-    width: 100%; /* Faz o botão ocupar 100% da largura do contêiner */
-    padding: 0.75rem 1.5rem; /* Diminui o padding para um botão menor */
-    font-size: 1rem; /* Diminui o tamanho da fonte */
+    .botoes .btn-primary { /* Alvo o botão específico */
+    width: 90%; /* Ajuste a largura para ter um pequeno espaçamento nas laterais */
+    max-width: 300px; /* Limita a largura máxima mesmo em 100% para não ficar muito grande */
+    padding: 0.75rem 1.5rem; /* Padding menor para celulares */
+    font-size: 1rem; /* Fonte menor para celulares */
+    display: block; /* Faz o botão ocupar a largura total disponível e centraliza com margin auto */
+    margin-left: auto;
+    margin-right: auto;
     }
 }
 

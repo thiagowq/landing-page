@@ -338,6 +338,18 @@ footer a.text-white:hover {
     color: #fff !important; 
 }
 
+.informacao h1 {
+    font-size: 2.5rem; /* Ajuste o tamanho da fonte para telas grandes */
+    font-weight: bold;
+}
+
+.informacao p {
+    font-size: 1.2rem;
+    max-width: 800px; /* Limita a largura do parágrafo para melhor leitura */
+    margin: 0 auto; /* Centraliza o parágrafo */
+}
+
+
 /* ------------------- RESPONSIVIDADE ------------------- */
 @media (max-width: 768px) {
     section.primeiro {
@@ -383,6 +395,14 @@ footer a.text-white:hover {
 
     .contato-form {
         margin-top: 20px; /* Adiciona um espaço entre o bloco de contato e o formulário */
+    }
+
+    .informacao h1 {
+        font-size: 1.8rem;
+    }
+
+    .informacao p {
+        font-size: 1rem;
     }
 }
 

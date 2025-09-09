@@ -81,9 +81,9 @@ section.segundo {
 
 .card {
     background-color: #2a2a2a;
-    border: none;
     color: white;
     transition: transform 0.2s ease-in-out;
+    border-color: #5c8b75;
 }
 
 .card:hover {

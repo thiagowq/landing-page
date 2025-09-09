@@ -1,50 +1,121 @@
+:root {
+    /* Tema Escuro (padrão) */
+    --cor-fundo-principal: #1a1a1a;
+    --cor-fundo-card: #2a2a2a;
+    --cor-fundo-accordion: #1e1e1e;
+    --cor-fundo-accordion-body: #1a1a1a;
+    --cor-fundo-secundario: #111;
+    --cor-fundo-terciario: rgb(63, 146, 63);
+    --cor-fundo-botoes: rgb(97, 226, 97);
+    --cor-fundo-botao-secundario: rgb(82, 82, 82);
+    --cor-borda: #5c8b75;
+    --cor-borda-clara: rgb(162, 228, 204);
+    
+    --cor-texto-principal: #fff;
+    --cor-texto-secundario: gray;
+    --cor-link: #2fef7d;
+    --cor-texto-card: #fff;
+    --cor-texto-paragrafo-claro: #ccc;
+    --cor-texto-botao: white;
+
+    --cor-icone: #2fef7d;
+    --filtro-icone-claro: invert(47%) sepia(21%) saturate(2102%) hue-rotate(104deg) brightness(97%) contrast(89%);
+    --filtro-footer-icones: invert(100%);
+}
+
+.tema-claro {
+    /* Tema Claro */
+    --cor-fundo-principal: #f8f9fa;
+    --cor-fundo-card: #fff;
+    --cor-fundo-accordion: #e9ecef;
+    --cor-fundo-accordion-body: #f8f9fa;
+    --cor-fundo-secundario: #e9ecef;
+    --cor-fundo-terciario: #419641;
+    --cor-fundo-botoes: #419641;
+    --cor-fundo-botao-secundario: #6c757d;
+    --cor-borda: #dee2e6;
+    --cor-borda-clara: #ced4da;
+    
+    --cor-texto-principal: #212529;
+    --cor-texto-secundario: #495057;
+    --cor-link: #212529;
+    --cor-texto-card: #212529;
+    --cor-texto-paragrafo-claro: #6c757d;
+    --cor-texto-botao: white;
+
+    --cor-icone: #1c2120;
+    --filtro-icone-claro: invert(14%) sepia(8%) saturate(1478%) hue-rotate(109deg) brightness(97%) contrast(90%);
+    --filtro-footer-icones: invert(0%);
+}
+
+/* Aplicação das variáveis em todo o site */
 body {
     font-family: "Poppins", sans-serif;
-    background-color: #1a1a1a;
-    overflow-x: hidden; /* tira a rolagem horizontal */
+    background-color: var(--cor-fundo-principal);
+    color: var(--cor-texto-principal);
+    overflow-x: hidden;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 header {
-    background-color: #1a1a1a;
-    border-bottom: 1px solid gray;
+    background-color: var(--cor-fundo-principal);
+    border-bottom: 1px solid var(--cor-borda);
+    transition: background-color 0.5s ease, border-bottom 0.5s ease;
 }
 
 header .nav-link {
-    color: rgb(151, 150, 150);
+    color: var(--cor-texto-secundario);
     transition: 0.3s;
 }
 
 header .nav-link:hover {
-    color: white;
+    color: var(--cor-texto-principal);
+}
+
+/* Ícone do sol/lua na navbar */
+#imagem {
+    filter: var(--filtro-icone-claro);
+    transition: filter 0.5s ease;
+}
+
+.dropdown-menu {
+    background-color: var(--cor-fundo-card);
+}
+
+.dropdown-item {
+    color: var(--cor-texto-principal);
+}
+
+.dropdown-item:hover {
+    background-color: var(--cor-borda);
 }
 
 section.primeiro {
-    color: gray;
     padding: 100px 15px;
 }
 
 section h1#p1 {
     font-size: 2.5rem;
-    color: white;
+    color: var(--cor-texto-principal);
     font-weight: 700;
 }
 
 section h2#p2 {
     font-size: 2rem;
-    color: rgb(97, 226, 97);
+    color: var(--cor-link);
     margin-bottom: 20px;
 }
 
 section p#m1 {
     font-size: 1rem;
-    color: white;
+    color: var(--cor-texto-principal);
     margin-bottom: 20px;
 }
 
 .botoes button {
     border-radius: 10px;
-    color: white;
-    background-color: rgb(97, 226, 97);
+    color: var(--cor-texto-botao);
+    background-color: var(--cor-fundo-botoes);
     border: none;
     padding: 10px 20px;
     transition: 0.3s;
@@ -52,11 +123,10 @@ section p#m1 {
 
 .botoes button#pri {
     border-radius: 10px;
-    color: white;
-    background-color: rgb(82, 82, 82);
+    color: var(--cor-texto-botao);
+    background-color: var(--cor-fundo-botao-secundario);
     border: none;
     padding: 10px 20px;
-    transition: 0.3s;
 }
 
 .botoes button:hover {
@@ -65,13 +135,13 @@ section p#m1 {
 
 section h1#p3 {
     font-size: 2rem;
-    color: gray;
+    color: var(--cor-texto-secundario);
     margin-bottom: 10px;
 }
 
 section p#m2, section p#m3 {
     font-size: 1rem;
-    color: white;
+    color: var(--cor-texto-principal);
     margin: 0;
 }
 
@@ -80,10 +150,10 @@ section.segundo {
 }
 
 .card {
-    background-color: #2a2a2a;
-    color: white;
-    transition: transform 0.2s ease-in-out;
-    border-color: #5c8b75;
+    background-color: var(--cor-fundo-card);
+    color: var(--cor-texto-card);
+    transition: transform 0.2s ease-in-out, background-color 0.5s ease, border-color 0.5s ease;
+    border-color: var(--cor-borda);
 }
 
 .card:hover {
@@ -93,20 +163,21 @@ section.segundo {
 section.terceiro {
     height: auto;
     width: 100%;
-    background-color: rgb(63, 146, 63);
+    background-color: var(--cor-fundo-terciario);
     padding: 40px 20px;
-    color: #fff;
+    color: var(--cor-texto-principal);
+    transition: background-color 0.5s ease;
 }
 
-.bloco1, h1{
+.bloco1 h1, .bloco2 h1{
     font-size: 40px;
-    color: white;
+    color: var(--cor-texto-principal);
 }
 
-.bloco1, p{
+.bloco1 p, .bloco2 p {
     font-size: 1rem;
     margin-bottom: 10px;
-    color: white;
+    color: var(--cor-texto-principal);
 }
 
 section.terceiro div:nth-of-type(2) h1 {
@@ -116,39 +187,40 @@ section.terceiro div:nth-of-type(2) h1 {
 
 section.quarto{
     padding-top: 5%;
-    background-color: #1a1a1a;
+    background-color: var(--cor-fundo-principal);
+    transition: background-color 0.5s ease;
 }
 
 .divis1{
     margin: 0;
     min-height: 350px;
     padding: 20px;
-    border: 1px solid rgb(162, 228, 204);
+    border: 1px solid var(--cor-borda-clara);
     border-radius: 10px;
-    background-color: #2a2a2a;
-    transition: transform 0.2s ease-in-out;
+    background-color: var(--cor-fundo-card);
+    transition: transform 0.2s ease-in-out, background-color 0.5s ease, border-color 0.5s ease;
 }
 
 .divis1:hover {
     transform: translateY(-5px);
 }
 
-.divis1, h3{
-    color: white;
+.divis1 h3{
+    color: var(--cor-texto-principal);
     font-size: 1.5rem;
     margin-bottom: 10px;
 }
 
 .divis1 p {
-    color: #ccc;
+    color: var(--cor-texto-paragrafo-claro);
     font-size: 1rem;
     margin-bottom: 15px;
 }
 
 .botoes1 button {
     border-radius: 10px;
-    color: white;
-    background-color: rgb(97, 226, 97);
+    color: var(--cor-texto-botao);
+    background-color: var(--cor-fundo-botoes);
     border: none;
     padding: 8px 16px;
     transition: 0.3s;
@@ -160,6 +232,8 @@ section.quarto{
 
 section.quinto{
     padding-top: 10%;
+    background-color: var(--cor-fundo-principal);
+    transition: background-color 0.5s ease;
 }
 
 .accordion {
@@ -171,20 +245,22 @@ section.quinto{
 }
 
 .accordion-button {
-  background-color: #1e1e1e; /* fundo do botão */
-  color: #fff; /* texto branco */
-  font-size: 18px; /* aumenta o tamanho da fonte */
+    background-color: var(--cor-fundo-accordion);
+    color: var(--cor-texto-principal);
+    font-size: 18px;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .accordion-button:not(.collapsed) {
-  background-color: #1a1a1a; /* fundo quando está aberto */
-  color:white;
+    background-color: var(--cor-fundo-accordion-body);
+    color: var(--cor-texto-principal);
 }
 
 .accordion-body {
-  background-color: #1a1a1a; /* fundo do corpo */
-  color: white; /* cor do texto */
-  font-size: 16px; /* aumenta fonte do conteúdo */
+    background-color: var(--cor-fundo-accordion-body);
+    color: var(--cor-texto-principal);
+    font-size: 16px;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .accordion-item{
@@ -193,17 +269,19 @@ section.quinto{
 }
 
 .accordion-button:focus {
-  box-shadow: none !important;
-  outline: 0 !important;
+    box-shadow: none !important;
+    outline: 0 !important;
 }
 
 .accordion-item:last-of-type {
-  border-bottom-right-radius: 0 !important;
-  border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
 }
 
 section.sexto{
     padding-top: 10%;
+    background-color: var(--cor-fundo-principal);
+    transition: background-color 0.5s ease;
 }
 
 .contato-container {
@@ -214,7 +292,7 @@ section.sexto{
     padding-top: 20px;
     max-width: 1200px;
     margin: 0 auto;
-    gap: 40px; /* espaço entre as colunas */
+    gap: 40px;
 }
 
 .contato{
@@ -222,7 +300,6 @@ section.sexto{
     text-align: left;
 }
 
-/* lado esquerdo */
 .contato-info {
     flex: 1;
     padding-top: 20px;
@@ -235,15 +312,15 @@ section.sexto{
     width: 100%;
 }
 
-/* lado direito (formulário) */
 .contato-form {
-    background: #111;
+    background: var(--cor-fundo-secundario);
     padding: 20px;
     border-radius: 10px;
+    transition: background-color 0.5s ease;
 }
 
 .form h4{
-    color: #fff;
+    color: var(--cor-texto-principal);
     margin-bottom: 20px;
 }
 
@@ -259,32 +336,27 @@ section.sexto{
     flex-direction: column;
 }
 
-.form-group {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
 .form-group label {
-    color: #fff;
+    color: var(--cor-texto-principal);
     margin-bottom: 5px;
 }
 
 .form-control {
-    background: #222;
-    border: 1px solid #333;
-    color: #fff;
+    background: var(--cor-fundo-card);
+    border: 1px solid var(--cor-borda);
+    color: var(--cor-texto-principal);
     padding: 10px;
     border-radius: 5px;
+    transition: background-color 0.5s ease, border-color 0.5s ease, color 0.5s ease;
 }
 
 .form-control::placeholder {
-    color: #aaa;
+    color: var(--cor-texto-paragrafo-claro);
 }
 
 .btn-enviar {
-    background: rgb(97, 226, 97);
-    color: #fff;
+    background: var(--cor-fundo-botoes);
+    color: var(--cor-texto-botao);
     border: none;
     padding: 10px;
     width: 100%;
@@ -292,9 +364,9 @@ section.sexto{
     cursor: pointer;
     font-weight: bold;
     margin-top: 20px;
+    transition: background-color 0.3s;
 }
 
-/* itens (ícone + texto) */
 .contato-item {
     display: flex;
     align-items: flex-start;
@@ -304,64 +376,77 @@ section.sexto{
 .contato-item img {
     width: 25px;
     margin-right: 10px;
-    filter: invert(47%) sepia(21%) saturate(2102%) hue-rotate(104deg) brightness(97%) contrast(89%);
+    filter: var(--filtro-icone-claro);
+    transition: filter 0.5s ease;
 }
 
 .contato-item h6 {
     margin: 0;
-    color: #fff;
+    color: var(--cor-texto-principal);
 }
 
 .contato-item p {
-  margin: 3px 0;
-  color: #aaa;
+    margin: 3px 0;
+    color: var(--cor-texto-paragrafo-claro);
 }
 
 .informacao{
-    background-color: rgb(72, 192, 72);
+    background-color: var(--cor-fundo-terciario);
     text-align: center;
     padding-top: 50px;
     height: 250px;
     left: 100vh;
+    transition: background-color 0.5s ease;
+}
+
+footer {
+    background-color: var(--cor-fundo-principal) !important;
+    transition: background-color 0.5s ease;
+}
+
+footer h5, footer p, footer a {
+    color: var(--cor-texto-principal) !important;
+    transition: color 0.5s ease;
 }
 
 footer a.text-white {
-    /* Define uma cor inicial para os links, com um pouco de transparência para ficar mais suave */
-    color: rgba(255, 255, 255, 0.7) !important; 
-    /* Adiciona a transição na propriedade 'color' para que a mudança seja suave */
+    color: rgba(255, 255, 255, 0.7) !important;
     transition: color 0.3s ease-in-out;
 }
 
-/* Estilo para quando o mouse passar por cima do link */
 footer a.text-white:hover {
-    /* Altera a cor para branco puro */
     color: #fff !important; 
 }
 
+.social-icons img {
+    filter: var(--filtro-footer-icones);
+    transition: filter 0.5s ease;
+}
+
 .informacao h1 {
-    font-size: 2.5rem; /* Ajuste o tamanho da fonte para telas grandes */
+    font-size: 2.5rem;
 }
 
 .informacao p {
     font-size: 1.2rem;
-    max-width: 800px; /* Limita a largura do parágrafo para melhor leitura */
-    margin: 0 auto; /* Centraliza o parágrafo */
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.botoes .btn-primary { /* Usando .btn-primary para ter certeza que é o botão certo */
-    background-color: #419641; /* Cor de fundo verde que parece com a imagem */
-    border-color: #419641; /* Cor da borda igual à do fundo */
-    color: white; /* Cor do texto do botão */
-    border-radius: 0.5rem; /* Borda arredondada */
-    text-align: center; /* Garante que o texto esteja centralizado */
-    display: inline-block; /* Ou block, dependendo do comportamento desejado */
-    padding: 1rem 2rem; /* Padding base para o botão */
-    font-size: 1.25rem; /* Tamanho da fonte base */
-    transition: all 0.3s ease-in-out; /* Transição para hover */
+.botoes .btn-primary {
+    background-color: #286b44;
+    border-color: var(--cor-fundo-botoes);
+    color: white;
+    border-radius: 0.5rem;
+    text-align: center;
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
 .botoes .btn-primary:hover {
-    background-color: #237723; /* Uma cor um pouco mais escura no hover */
+    background-color: #237723;
     border-color: #237723;
 }
 
@@ -399,17 +484,17 @@ footer a.text-white:hover {
     }
 
     .contato-container {
-        flex-direction: column; /* Altera a direção dos itens para coluna */
+        flex-direction: column;
     }
 
     .contato-info,
     .contato-form {
-        flex: auto; /* Remove a flexibilidade para que ocupem 100% da largura */
+        flex: auto;
         width: 100%;
     }
 
     .contato-form {
-        margin-top: 20px; /* Adiciona um espaço entre o bloco de contato e o formulário */
+        margin-top: 20px;
     }
 
     .informacao h1 {
@@ -420,12 +505,12 @@ footer a.text-white:hover {
         font-size: 1rem;
     }
 
-    .botoes .btn-primary { /* Alvo o botão específico */
-    width: 90%; /* Ajuste a largura para ter um pequeno espaçamento nas laterais */
-    max-width: 300px; /* Limita a largura máxima mesmo em 100% para não ficar muito grande */
-    padding: 0.75rem 1.5rem; /* Padding menor para celulares */
-    font-size: 1rem; /* Fonte menor para celulares */
-    display: block; /* Faz o botão ocupar a largura total disponível e centraliza com margin auto */
+    .botoes .btn-primary {
+    width: 90%;
+    max-width: 300px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    display: block;
     margin-left: auto;
     margin-right: auto;
     }

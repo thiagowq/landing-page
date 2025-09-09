@@ -48,6 +48,10 @@
     --filtro-footer-icones: invert(0%);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Aplicação das variáveis em todo o site */
 body {
     font-family: "Poppins", sans-serif;

@@ -5,7 +5,7 @@ function aplicarTema(tema) {
     
     if (tema === 'claro') {
         body.classList.add('tema-claro');
-        imagem.src = "src/imagens/logos/lua.svg"; // Muda para o ícone da lua
+        imagem.src = "src/imagens/logos/sol.svg"; // Muda para o ícone da lua
     } else {
         body.classList.remove('tema-claro');
         imagem.src = "src/imagens/logos/sol.svg"; // Muda para o ícone do sol
@@ -39,8 +39,7 @@ if (linkModoEscuro) {
 if (linkModoSistema) {
     linkModoSistema.addEventListener('click', (e) => {
         e.preventDefault();
-        localStorage.removeItem('tema'); // Remove a preferência salva
-        // Chama a função novamente para que ela verifique a preferência do sistema
+        localStorage.removeItem('tema'); 
         verificaTemaSalvoOuSistema();
     });
 }
@@ -63,7 +62,7 @@ function verificaTemaSalvoOuSistema() {
 // Ao carregar a página, verifica o tema
 document.addEventListener('DOMContentLoaded', verificaTemaSalvoOuSistema);
 
-// Opcional: ouvir mudanças na preferência do sistema
+
 window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', event => {
     // Só atualiza se o usuário estiver no modo "Sistema"
     if (!localStorage.getItem('tema')) {
@@ -71,7 +70,7 @@ window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', ev
     }
 });
 
-// Código para a máscara de telefone (mantido como estava)
+// Código para o telefone
 const phoneInput = document.getElementById('floatingTel');
 phoneInput.addEventListener('input', (event) => {
     let value = event.target.value;

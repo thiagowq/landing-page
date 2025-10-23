@@ -1,22 +1,23 @@
 :root {
     /* Tema Escuro (padrão) */
-    --cor-fundo-principal: #1a1a1a;
-    --cor-fundo-card: #2a2a2a;
+    --cor-fundo-principal: #172a3aff;
+    --cor-fundo-card: rgb(50, 78, 82);
     --cor-fundo-accordion: #1e1e1e;
     --cor-fundo-accordion-body: #1a1a1a;
     --cor-fundo-secundario: #111;
-    --cor-fundo-terciario: rgb(63, 146, 63);
-    --cor-fundo-botoes: rgb(97, 226, 97);
+    --cor-fundo-terciario: #004346ff;
+    --cor-fundo-botoes: #508991ff;
     --cor-fundo-botao-secundario: rgb(82, 82, 82);
-    --cor-borda: #5c8b75;
-    --cor-borda-clara: rgb(162, 228, 204);
+    --cor-borda: #74b3ceff;
+    --cor-borda-clara: #74b3ceff;
     
     --cor-texto-principal: #fff;
-    --cor-texto-secundario: gray;
+    --cor-texto-secundario: #fff;
     --cor-link: #2fef7d;
     --cor-texto-card: #fff;
     --cor-texto-paragrafo-claro: #ccc;
     --cor-texto-botao: white;
+    --cor-h1-section1:#2fef7d;
 
     --cor-icone: #2fef7d;
     --filtro-icone-claro: invert(47%) sepia(21%) saturate(2102%) hue-rotate(104deg) brightness(97%) contrast(89%);
@@ -30,8 +31,8 @@
     --cor-fundo-accordion: #e9ecef;
     --cor-fundo-accordion-body: #f8f9fa;
     --cor-fundo-secundario: #e9ecef;
-    --cor-fundo-terciario: #419641;
-    --cor-fundo-botoes: #419641;
+    --cor-fundo-terciario: #508991ff;
+    --cor-fundo-botoes: #508991ff;
     --cor-fundo-botao-secundario: #6c757d;
     --cor-borda: #dee2e6;
     --cor-borda-clara: #ced4da;
@@ -42,6 +43,7 @@
     --cor-texto-card: #212529;
     --cor-texto-paragrafo-claro: #6c757d;
     --cor-texto-botao: white;
+    --cor-h1-section1:#212529;
 
     --cor-icone: #1c2120;
     --filtro-icone-claro: invert(14%) sepia(8%) saturate(1478%) hue-rotate(109deg) brightness(97%) contrast(90%);
@@ -108,6 +110,10 @@ section h2#p2 {
     font-size: 2rem;
     color: var(--cor-link);
     margin-bottom: 20px;
+}
+
+section.primeiro h1#p3{
+    color: var(--cor-h1-section1);
 }
 
 section p#m1 {
@@ -438,7 +444,7 @@ footer a.text-white:hover {
 }
 
 .botoes .btn-primary {
-    background-color: #286b44;
+    background-color: #508991ff;
     border-color: var(--cor-fundo-botoes);
     color: white;
     border-radius: 0.5rem;
@@ -450,8 +456,8 @@ footer a.text-white:hover {
 }
 
 .botoes .btn-primary:hover {
-    background-color: #237723;
-    border-color: #237723;
+    background-color: #74b3ceff;
+    border-color: #74b3ceff;
 }
 
 /* ------------------- RESPONSIVIDADE ------------------- */
